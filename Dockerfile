@@ -8,7 +8,7 @@ RUN apt-get update && apt-get -y upgrade -u && apt-get clean
 RUN apt-get install -y --no-install-recommends openssh-client git
 
 # Install hugo
-ENV hugo_deb_url=https://github.com/gohugoio/hugo/releases/download/v0.26/hugo_0.26_Linux-64bit.deb
+ENV hugo_deb_url=https://github.com/gohugoio/hugo/releases/download/v0.49.2/hugo_0.49.2_Linux-64bit.deb
 ADD ${hugo_deb_url} /tmp/hugo.deb
 RUN dpkg -i /tmp/hugo.deb && rm -f /tmp/hugo.deb
 
